@@ -24,6 +24,6 @@
 	}
 	else
 	{
-		echo "Not Found!";
+		echo "The email and password you entered don't match.";
 	}
 ?>
