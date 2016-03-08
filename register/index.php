@@ -7,7 +7,7 @@
 	$Name = $_GET["Name"];
 	$Password = $_GET["Password"];
 	
-	$sql = "INSERT INTO Users (Email, Mobile, AccountNumber, Name, Password) VALUES('$Email', '$Mobile', '$AccountNumber', '$Name', '$Password');";
+	$sql = "INSERT INTO Users(Email, Mobile, AccountNumber, Name, Password) VALUES('$Email', '$Mobile', '$AccountNumber', '$Name', '$Password');";
 	
 	if(mysqli_query($conn, $sql))
 	{
