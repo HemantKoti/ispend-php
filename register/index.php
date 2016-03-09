@@ -1,17 +1,17 @@
 <?php
 	require "../init.php";
 	
-	$Email = $_GET["Email"];
-	$Mobile = $_GET["Mobile"];
-	$AccountNumber = $_GET["AccountNumber"];
-	$Name = $_GET["Name"];
-	$Password = $_GET["Password"];
+	$Email = $_POST["Email"];
+	$Mobile = $_POST["Mobile"];
+	$AccountNumber = $_POST["AccountNumber"];
+	$Name = $_POST["Name"];
+	$Password = $_POST["Password"];
 	
 	$sql = "INSERT INTO Users(Email, Mobile, AccountNumber, Name, Password) VALUES('$Email', '$Mobile', '$AccountNumber', '$Name', '$Password');";
 	
 	if(mysqli_query($conn, $sql))
 	{
-		echo "Registration Successfull!";
+		echo "Registration Successfull";
 	}
 	else
 	{
