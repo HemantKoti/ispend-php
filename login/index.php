@@ -19,11 +19,11 @@
 		$user["AccountNumber"] = $row["AccountNumber"];
 		$user["Name"] = $row["Name"];
 		$user["Password"] = $row["Password"];
-		
-		echo json_encode($user);
 	}
 	else
 	{
-		echo "The email and password you entered don't match.";
+		//echo "The email and password you entered don't match.";
 	}
+	
+	echo json_encode($user);
 ?>
