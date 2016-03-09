@@ -1,8 +1,8 @@
  <?php
 	require "../init.php";
 	
-	$Email = $_GET["Email"];
-	$Password = $_GET["Password"];
+	$Email = $_POST["Email"];
+	$Password = $_POST["Password"];
 	
 	$sql = "SELECT * FROM Users WHERE Email = '$Email' AND Password = '$Password';";
 	
