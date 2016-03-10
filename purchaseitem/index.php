@@ -1,10 +1,10 @@
 <?php
 	require "../init.php";
 	
-	$Buyer = $_GET["Buyer"];
-	$ItemName = $_GET["ItemName"];
-	$ItemPrice = $_GET["ItemPrice"];
-	$ItemCategory = $_GET["ItemCategory"];
+	$Buyer = $_POST["Buyer"];
+	$ItemName = $_POST["ItemName"];
+	$ItemPrice = $_POST["ItemPrice"];
+	$ItemCategory = $_POST["ItemCategory"];
 	
 	$sql = "INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Buyer', '$ItemName', '$ItemPrice', '$ItemCategory');";
 	
