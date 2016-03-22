@@ -7,8 +7,9 @@
 	$Electronics = $_GET["Electronics"];
 	$Fashion = $_GET["Fashion"];
 	$Other = $_GET["Other"];
+	$Total = $_GET["Total"];
 	
-	$sql = "INSERT INTO Budget(Email, Food, Entertainment, Electronics, Fashion, Other) VALUES('$Email', '$Food', '$Entertainment', '$Electronics', '$Fashion', '$Other');";
+	$sql = "INSERT INTO Budget(Email, Food, Entertainment, Electronics, Fashion, Other, Total) VALUES('$Email', '$Food', '$Entertainment', '$Electronics', '$Fashion', '$Other', '$Total');";
 	
 	if(mysqli_query($conn, $sql))
 	{
