@@ -1,15 +1,15 @@
 <?php
 	require "../init.php";
 	
-	$Email = $_GET["Email"];
-	$Food = $_GET["Food"];
-	$Entertainment = $_GET["Entertainment"];
-	$Electronics = $_GET["Electronics"];
-	$Fashion = $_GET["Fashion"];
-	$Other = $_GET["Other"];
-	$Total = $_GET["Total"];
+	$Email = $_POST["Email"];
+	$Food = $_POST["Food"];
+	$Entertainment = $_POST["Entertainment"];
+	$Electronics = $_POST["Electronics"];
+	$Fashion = $_POST["Fashion"];
+	$Other = $_POST["Other"];
+	$Total = $_POST["Total"];
 	
-	$sql = "INSERT INTO Budget(Email, Food, Entertainment, Electronics, Fashion, Other, Total) VALUES('$Email', '$Food', '$Entertainment', '$Electronics', '$Fashion', '$Other', '$Total');";
+	$sql = "INSERT INTO `ispend`.`Budget` (`Email`, `Food`, `Entertainment`, `Electronics`, `Fashion`, `Other`, `Total`) VALUES ('$Email', '$Food', '$Entertainment', '$Electronics', '$Fashion', '$Other', '$Total');"
 	
 	if(mysqli_query($conn, $sql))
 	{
