@@ -26,6 +26,9 @@
 		
 		$sql5 = "INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Other');";
 		mysqli_query($conn, $sql5);
+		
+		$sql6 = "INSERT INTO `ispend`.`Budget` (`Email`, `Food`, `Entertainment`, `Electronics`, `Fashion`, `Other`, `Total`) VALUES ('$Email', '0', '0', '0', '0', '0', '0');";
+		mysqli_query($conn, $sql6);
 	}
 	else
 	{
