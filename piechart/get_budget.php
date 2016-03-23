@@ -3,7 +3,7 @@
 	
 	$Email = $_POST["Email"];
 	
-	$sql = "SELECT ItemCategory, SUM(ItemPrice) FROM Purchases WHERE Buyer = '$Email' GROUP BY ItemCategory";
+	$sql = "SELECT ItemCategory, SUM(ItemPrice) FROM Purchases WHERE Buyer = '$Email' GROUP BY ItemCategory;";
 	
 	$result = mysqli_query($conn, $sql);
 	
