@@ -3,7 +3,7 @@
 	
 	$Email = $_POST["Email"];
 	
-	$sql = "SELECT * FROM Purchases WHERE Buyer = '$Email' AND ItemName NOT NULL";
+	$sql = "SELECT * FROM Purchases WHERE Buyer = '$Email'";
 	
 	$result = mysqli_query($conn, $sql);
 	
