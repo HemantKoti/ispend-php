@@ -1,7 +1,7 @@
  <?php
 	require "../init.php";
 	
-	$Email = $_GET["Email"];
+	$Email = $_POST["Email"];
 	
 	$budget = array();
 	
