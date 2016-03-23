@@ -13,11 +13,11 @@
 	{
 		$row = mysqli_fetch_assoc($result);
 		
-		$budget["Food"] = $row["Food"];
-		$budget["Entertainment"] = $row["Entertainment"];
-		$budget["Electronics"] = $row["Electronics"];
-		$budget["Fashion"] = $row["Fashion"];
-		$budget["Other"] = $row["Other"];
+		$budget["Food"] = $row[3];
+		$budget["Entertainment"] = $row[1];
+		$budget["Electronics"] = $row[0];
+		$budget["Fashion"] = $row[2];
+		$budget["Other"] = $row[4];
 	}
 	else
 	{
