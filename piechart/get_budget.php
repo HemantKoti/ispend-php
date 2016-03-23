@@ -1,7 +1,7 @@
  <?php
 	require "../init.php";
 	
-	$Email = $_POST["Email"];
+	$Email = $_GET["Email"];
 	
 	$sql = "SELECT ItemCategory, SUM(ItemPrice) FROM Purchases WHERE Buyer = '$Email' GROUP BY ItemCategory;";
 	
