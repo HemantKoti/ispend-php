@@ -9,7 +9,7 @@
 	$Other = $_POST["Other"];
 	$Total = $_POST["Total"];
 	
-	$sql = "INSERT INTO `ispend`.`Budget` (`Email`, `Food`, `Entertainment`, `Electronics`, `Fashion`, `Other`, `Total`) VALUES ('$Email', '$Food', '$Entertainment', '$Electronics', '$Fashion', '$Other', '$Total');";
+	$sql = "UPDATE `ispend`.`Budget` SET `Food` = '$Food', `Entertainment` = '$Entertainment', `Electronics` = '$Electronics', `Fashion` = '$Fashion', `Other` = '$Other', `Total` = '$Total' WHERE `Email` = '$Email';";
 	
 	if(mysqli_query($conn, $sql))
 	{
