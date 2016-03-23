@@ -13,19 +13,19 @@
 	{
 		echo "Registration Successfull";
 		
-		$sql1 = INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Electronics');
+		$sql1 = "INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Electronics');";
 		mysqli_query($conn, $sql1);
 		
-		$sql2 = INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Entertainment');
+		$sql2 = "INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Entertainment');";
 		mysqli_query($conn, $sql2);
 		
-		$sql3 = INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Fashion');
+		$sql3 = "INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Fashion');";
 		mysqli_query($conn, $sql3);
 		
-		$sql4 = INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Food');
+		$sql4 = "INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Food');";
 		mysqli_query($conn, $sql4);
 		
-		$sql5 = INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Other');
+		$sql5 = "INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Other');";
 		mysqli_query($conn, $sql5);
 	}
 	else
