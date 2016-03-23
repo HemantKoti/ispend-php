@@ -17,16 +17,16 @@
 		mysqli_query($conn, $sql1);
 		
 		$sql2 = INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Entertainment');
-		mysqli_query($conn, $sql1);
+		mysqli_query($conn, $sql2);
 		
 		$sql3 = INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Fashion');
-		mysqli_query($conn, $sql1);
+		mysqli_query($conn, $sql3);
 		
 		$sql4 = INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Food');
-		mysqli_query($conn, $sql1);
+		mysqli_query($conn, $sql4);
 		
 		$sql5 = INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`) VALUES (NULL, '$Email', NULL, '0', 'Other');
-		mysqli_query($conn, $sql1);
+		mysqli_query($conn, $sql5);
 	}
 	else
 	{
