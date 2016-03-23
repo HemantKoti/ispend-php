@@ -6,7 +6,7 @@
 	$budget = array();
 	
 	$sql1 = "SELECT SUM(`ItemPrice`) AS Food FROM `Purchases` WHERE `Buyer` = '$Email' AND `ItemCategory` = 'Food';";
-	$result = mysqli_query($conn, $sql);
+	$result = mysqli_query($conn, $sql1);
 	if(mysqli_num_rows($result) > 0)
 	{
 		$row = mysqli_fetch_assoc($result);
