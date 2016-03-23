@@ -18,7 +18,6 @@
 		$budget["Electronics"] = $row["Electronics"];
 		$budget["Fashion"] = $row["Fashion"];
 		$budget["Other"] = $row["Other"];
-		$budget["Total"] = $row["Total"];
 	}
 	else
 	{
