@@ -46,11 +46,7 @@
 	}
 	
 	$sql = "SELECT * FROM Budget WHERE Email = '$Email';";
-	
 	$result = mysqli_query($conn, $sql);
-	
-	$budget = array();
-	
 	if(mysqli_num_rows($result) > 0)
 	{
 		$row = mysqli_fetch_assoc($result);
