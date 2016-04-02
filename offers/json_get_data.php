@@ -3,7 +3,7 @@
 	
 	$Category = $_POST["GET"];
 	
-	$sql = "SELECT * FROM `Offers`;";
+	$sql = "SELECT * FROM `Offers` WHERE `Category` = '$Category';";
 	
 	$result = mysqli_query($conn, $sql);
 	
