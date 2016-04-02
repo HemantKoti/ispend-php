@@ -3,6 +3,8 @@
 	
 	$Category = $_POST["GET"];
 	
+	echo "hello";
+	
 	$sql = "SELECT * FROM `Offers`;";
 	
 	$result = mysqli_query($conn, $sql);
