@@ -1,7 +1,7 @@
  <?php
 	require "../init.php";
 	
-	$Category = $_GET["Category"];
+	$Category = $_POST["Category"];
 	
 	$sql = "SELECT * FROM `Offers` WHERE `Category` = '$Category';";
 	
