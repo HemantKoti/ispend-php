@@ -1,9 +1,7 @@
  <?php
-	require "init.php";
+	require "../init.php";
 	
 	$Category = $_POST["GET"];
-	
-	echo "hello";
 	
 	$sql = "SELECT * FROM `Offers`;";
 	
