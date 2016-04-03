@@ -1,4 +1,5 @@
-
+<html>
+<body>
 <?php
         require "../init.php";
 		$sqlUsers = "SELECT Email FROM Users;";
@@ -50,3 +51,5 @@
             echo "No results in Users Table";
         }
 ?>
+</body>
+</html>
