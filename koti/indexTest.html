@@ -23,7 +23,7 @@
             function validator(form) {
                 var password = form.psd.value;
                 if (password == "ispendjntuh") {
-				
+					alert("Welcome");
                 } else {
                     alert("Invalid Password");
                 }
@@ -42,7 +42,7 @@
                             <td><input type="password" name="psd" size="20"></td>
                         </tr>
                     </table>
-                    <p><input type="button" value="Submit" id="submitButton" onclick="validator(this.form)">
+                    <p><input type="button" value="submit" name = "submit" id="submitButton" onclick="validator(this.form)">
                 </form>
             </center>
         </div>

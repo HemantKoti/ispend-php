@@ -2,6 +2,7 @@
 <body>
 <?php
         require "../init.php";
+		$pwd = $_POST['psd'];
 		$sqlUsers = "SELECT Email FROM Users;";
         $email = "";
         $offers = "";
@@ -11,6 +12,9 @@
 		'X-Mailer: PHP/' . phpversion();
 
         $resultUsers = mysqli_query($conn, $sqlUsers);
+		if(!isset($_POST['submit'])){
+			echo nl2br ("Click Submit first\n");
+		}
         if (mysqli_num_rows($resultUsers) > 0) {
             while ($rowUsers = mysqli_fetch_assoc($resultUsers)) {
                 if (filter_var($rowUsers["Email"], FILTER_VALIDATE_EMAIL)) {
