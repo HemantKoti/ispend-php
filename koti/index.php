@@ -32,20 +32,20 @@
                                 }
                                 array_push($response, array("Email" => $rowUsers["Email"], "Body" => $body));
                             } else {
-                                echo nl2br("No results in Offers Table\n");
+                                //echo nl2br("No results in Offers Table\n");
                             }
                         } else {
-                            echo nl2br("Purchase Something\n");
+                           // echo nl2br("Purchase Something\n");
                         }
                     } else {
-                        echo nl2br("No results in Purchase Table\n");
+                       // echo nl2br("No results in Purchase Table\n");
                     }
                 } else {
-                    echo nl2br("Enter a Valid Email\n");
+                    //echo nl2br("Enter a Valid Email\n");
                 }
             }
         } else {
-            echo nl2br("No results in Users Table\n");
+            //echo nl2br("No results in Users Table\n");
         }
         echo json_encode(array("server_response" => $response));
         ?>
