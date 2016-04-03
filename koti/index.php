@@ -12,14 +12,13 @@
             while ($rowUsers = mysqli_fetch_assoc($resultUsers)) {
                 if (filter_var($rowUsers["Email"], FILTER_VALIDATE_EMAIL)) {
                     $email = $rowUsers["Email"];
-                    $sqlPurchase = "SELECT ItemPrice, ItemCategory FROM Purchases WHERE Buyer = '$email' ORDER BY ItemPrice desc LIMIT 1;";
-					//select top 1 * from newsletters where IsActive = 1 order by PublishDate desc
+                    $sqlPurchase = "SELECT ItemPrice, ItemCategory FROM Purchases WHERE Buyer = '$email' ORDER BY ItemPrice desc LIMIT 1;";					
                     $resultPurchase = mysqli_query($conn, $sqlPurchase);
                     if (mysqli_num_rows($resultPurchase) > 0) {
                         $rowPurchase = mysqli_fetch_assoc($resultPurchase);
                         if ($rowPurchase["ItemPrice"] != 0) {
                             $purchase = $rowPurchase["ItemCategory"];
-                            echo nl2br ("Highest price is : ".$rowPurchase["ItemPrice"]." for the category ".$rowPurchase["ItemCategory"]." for the email ".$rowUsers["Email"]."\n");
+                            //echo nl2br ("Highest price is : ".$rowPurchase["ItemPrice"]." for the category ".$rowPurchase["ItemCategory"]." for the email ".$rowUsers["Email"]."\n");
                             $sqlOffers = "SELECT Offer FROM Offers WHERE Category = '$purchase';";
                             $resultOffers = mysqli_query($conn, $sqlOffers);
                             $body = "";
