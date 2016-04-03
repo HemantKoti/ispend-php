@@ -3,11 +3,12 @@
         <?php
         $email = "kotihemant@gmail.com";
         $body = "Hello are nainaaaaaaaaaaaaaa";
-        $headers = 'From: webmaster@example.com' . "\r\n" .
-                'Reply-To: webmaster@example.com' . "\r\n" .
-                'X-Mailer: PHP/' . phpversion();
+         $header = "From:someone@somedomain.com \r\n";
+         $header .= "Cc:someone@somedomain.com \r\n";
+         $header .= "MIME-Version: 1.0\r\n";
+         $header .= "Content-type: text/html\r\n";
 
-        $retval = mail($email, "Exciting Offers for you", $body, $headers);
+        $retval = mail($email, "Ispend Email", $body, $headers);
         if ($retval == true) {
             echo nl2br("Email Sent Successfully to : koti \n");
         } else {
