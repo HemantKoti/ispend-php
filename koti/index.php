@@ -1,30 +1,24 @@
 <?php
-require_once "Mail.php";
+require_once('class.phpmailer.php');
 
-$from = '<kotihemant@gmail.com>';
-$to = '<kotihemant5@gmail.com>';
-$subject = 'Hi!';
-$body = "Hi,\n\nHow are you?";
+$mail = new PHPMailer(); // create a new object
+$mail->IsSMTP(); // enable SMTP
+$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
+$mail->SMTPAuth = true; // authentication enabled
+$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 465; // or 587
+$mail->IsHTML(true);
+$mail->Username = "kotihemant5@gmail.com";
+$mail->Password = "hempad95";
+$mail->SetFrom("kotihemant5@gmail.com");
+$mail->Subject = "Test";
+$mail->Body = "hello";
+$mail->AddAddress("kotihemant@gmail.com");
 
-$headers = array(
-    'From' => $from,
-    'To' => $to,
-    'Subject' => $subject
-);
-
-$smtp = Mail::factory('smtp', array(
-        'host' => 'ssl://smtp.gmail.com',
-        'port' => '465',
-        'auth' => true,
-        'username' => 'johndoe@gmail.com',
-        'password' => 'passwordxxx'
-    ));
-
-$mail = $smtp->send($to, $headers, $body);
-
-if (PEAR::isError($mail)) {
-    echo('<p>' . $mail->getMessage() . '</p>');
-} else {
-    echo('<p>Message successfully sent!</p>');
-}
-?>
+ if(!$mail->Send()) {
+    echo "Mailer Error: " . $mail->ErrorInfo;
+ } else {
+    echo "Message has been sent";
+ }
+ ?>
