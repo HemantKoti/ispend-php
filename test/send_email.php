@@ -17,7 +17,7 @@
 			'host' => 'ssl://smtp.gmail.com',
 			'port' => '465',
 			'auth' => true,
-			'username' => 'emailsender827@gmail',
+			'username' => 'emailsender827@gmail.com',
 			'password' => 'emailsender1994'
 		));
 
