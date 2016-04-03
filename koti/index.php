@@ -19,7 +19,7 @@
                         $rowPurchase = mysqli_fetch_assoc($resultPurchase);
                         if ($rowPurchase["ItemPrice"] != 0) {
                             $purchase = $rowPurchase["ItemCategory"];
-                            echo nl2br ("Highest price is : ".$rowPurchase["HighestPrice"]." for the category ".$rowPurchase["ItemCategory"]." for the email ".$rowUsers["Email"]."\n");
+                            echo nl2br ("Highest price is : ".$rowPurchase["ItemPrice"]." for the category ".$rowPurchase["ItemCategory"]." for the email ".$rowUsers["Email"]."\n");
                             $sqlOffers = "SELECT Offer FROM Offers WHERE Category = '$purchase';";
                             $resultOffers = mysqli_query($conn, $sqlOffers);
                             $body = "";
