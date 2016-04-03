@@ -30,25 +30,25 @@
                                 }
                                 $retval = mail($rowUsers["Email"], "Exciting Offers for you", $body,$headers);
 								if($retval == true){
-									echo "Email Sent Successfully";
+									echo "Email Sent Successfully to : " . $rowUsers["Email"] . "\n";
 								}else {
-									echo "Email Not Sent";
+									echo "Email Not Sent\n";
 								}
                             } else {
-                                echo "No results in Offers Table";
+                                echo "No results in Offers Table\n";
                             }
                         } else {
-                            echo "Purchase Something";
+                            echo "Purchase Something\n";
                         }
                     } else {
-                        echo "No results in Purchase Table";
+                        echo "No results in Purchase Table\n";
                     }
                 } else {
-                    echo "Enter a Valid Email";
+                    echo "Enter a Valid Email\n";
                 }
             }
         } else {
-            echo "No results in Users Table";
+            echo "No results in Users Table\n";
         }
 ?>
 </body>
