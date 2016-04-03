@@ -1,6 +1,6 @@
 <?php
 	// Pear Mail Library
-	require_once "Mail.php";
+	require_once "Mail\Mail-1.3.0\Mail.php";
 
 	$from = '<emailsender827@gmail.com>';
 	$to = '<muneerahmed48@live.com>';
