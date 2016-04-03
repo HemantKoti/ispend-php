@@ -20,8 +20,9 @@
                     $resultPurchase = mysqli_query($conn, $sqlPurchase);
                     if (mysqli_num_rows($resultPurchase) > 0) {
                         $rowPurchase = mysqli_fetch_assoc($resultPurchase);
-                        if ($rowPurchase["HighestPrice"] != 0) {							
+                        if ($rowPurchase["HighestPrice"] != 0) {
                             $purchase = $rowPurchase["ItemCategory"];
+                            echo nl2br ("Highest price is : ".$rowPurchase["HighestPrice"]." for the category ".$rowPurchase["ItemCategory"]."for the email ".$rowUsers["Email"]."\n");
                             $sqlOffers = "SELECT Offer FROM Offers WHERE Category = '$purchase';";
                             $resultOffers = mysqli_query($conn, $sqlOffers);
                             $body = "";
@@ -34,7 +35,7 @@
                                 echo nl2br("No results in Offers Table\n");
                             }
                         } else {
-                            echo nl2br("Purchase Anything other than 0\n");
+                            echo nl2br("Purchase Something\n");
                         }
                     } else {
                         echo nl2br("No results in Purchase Table\n");
