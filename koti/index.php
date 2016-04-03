@@ -1,7 +1,7 @@
 <html>
     <body>
         <?php
-        $email = "kotihemant@gmail.com";
+        $email = "hemantkoti@ymail.com";
         $body = "Hello are nainaaaaaaaaaaaaaa";
          $header = "From:someone@somedomain.com \r\n";
          $header .= "Cc:someone@somedomain.com \r\n";
