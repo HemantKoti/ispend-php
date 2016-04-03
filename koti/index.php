@@ -12,7 +12,7 @@
             while ($rowUsers = mysqli_fetch_assoc($resultUsers)) {
                 if (filter_var($rowUsers["Email"], FILTER_VALIDATE_EMAIL)) {
                     $email = $rowUsers["Email"];
-                    $sqlPurchase = "SELECT LIMIT 1 ItemPrice, ItemCategory FROM Purchases WHERE Buyer = '$email' ORDER BY ItemPrice desc;";
+                    $sqlPurchase = "SELECT ItemPrice, ItemCategory FROM Purchases WHERE Buyer = '$email' ORDER BY ItemPrice desc LIMIT 1;";
 					//select top 1 * from newsletters where IsActive = 1 order by PublishDate desc
                     $resultPurchase = mysqli_query($conn, $sqlPurchase);
                     if (mysqli_num_rows($resultPurchase) > 0) {
