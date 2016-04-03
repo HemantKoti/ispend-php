@@ -1,17 +1,13 @@
 <html>
     <body>
         <?php
-        require "../init.php";
-        $pwd = $_POST['psd'];
+        require "../init.php";        
         $sqlUsers = "SELECT Email FROM Users;";
         $email = "";
         $offers = "";
         $purchase = "";
         $response = array();
         $resultUsers = mysqli_query($conn, $sqlUsers);
-        if (!isset($_POST['submit'])) {
-            echo nl2br("Click Submit first\n");
-        }
         if (mysqli_num_rows($resultUsers) > 0) {
             while ($rowUsers = mysqli_fetch_assoc($resultUsers)) {
                 if (filter_var($rowUsers["Email"], FILTER_VALIDATE_EMAIL)) {
@@ -22,7 +18,7 @@
                         $rowPurchase = mysqli_fetch_assoc($resultPurchase);
                         if ($rowPurchase["HighestPrice"] != 0) {
                             $purchase = $rowPurchase["ItemCategory"];
-                            echo nl2br ("Highest price is : ".$rowPurchase["HighestPrice"]." for the category ".$rowPurchase["ItemCategory"]."for the email ".$rowUsers["Email"]."\n");
+                            echo nl2br ("Highest price is : ".$rowPurchase["HighestPrice"]." for the category ".$rowPurchase["ItemCategory"]." for the email ".$rowUsers["Email"]."\n");
                             $sqlOffers = "SELECT Offer FROM Offers WHERE Category = '$purchase';";
                             $resultOffers = mysqli_query($conn, $sqlOffers);
                             $body = "";
