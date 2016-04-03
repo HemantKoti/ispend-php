@@ -1,9 +1,14 @@
+
 <?php
         require "../init.php";
 		$sqlUsers = "SELECT Email FROM Users;";
         $email = "";
         $offers = "";
         $purchase = "";
+		$headers = 'From: webmaster@example.com' . "\r\n" .
+		'Reply-To: webmaster@example.com' . "\r\n" .
+		'X-Mailer: PHP/' . phpversion();
+
         $resultUsers = mysqli_query($conn, $sqlUsers);
         if (mysqli_num_rows($resultUsers) > 0) {
             while ($rowUsers = mysqli_fetch_assoc($resultUsers)) {
@@ -22,7 +27,12 @@
                                 while ($rowOffers = mysqli_fetch_assoc($resultOffers)) {
                                     $body .= $rowOffers["Offer"] . "\n";
                                 }
-                                mail($rowUsers["Email"], "Exciting Offers for you", $body);
+                                $retval = mail($rowUsers["Email"], "Exciting Offers for you", $body,$headers);
+								if($retval == true){
+									echo "Email Sent Successfully";
+								}else {
+									echo "Email Not Sent";
+								}
                             } else {
                                 echo "No results in Offers Table";
                             }
