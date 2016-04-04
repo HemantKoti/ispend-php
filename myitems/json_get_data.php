@@ -11,7 +11,7 @@
 	
 	while($row = mysqli_fetch_array($result))
 	{
-		array_push($response, array("ItemName"=>$row[2], "ItemPrice"=>$row[3], "ItemCategory"=>$row[4]));
+		array_push($response, array("ItemName"=>$row[2], "ItemPrice"=>$row[3], "ItemCategory"=>$row[4], "PurchaseTime"=>$row[5]));
 	}
 	
 	echo json_encode(array("server_response"=>$response));
