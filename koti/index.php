@@ -11,7 +11,7 @@ if (mysqli_num_rows($resultUsers) > 0) {
 		if (filter_var($rowUsers["Email"], FILTER_VALIDATE_EMAIL)) {
 			$email = $rowUsers["Email"];
 			//$sqlPurchase = "SELECT ItemPrice, ItemCategory FROM Purchases WHERE Buyer = '$email' ORDER BY ItemPrice desc LIMIT 1;";		
-			$sqlPurchase = "SELECT ItemCategory, Max(Quantity) as HighestPrice FROM (SELECT ItemCategory, SUM(ItemPrice) as Quantity FROM Purchases  WHERE Buyer = '$email' GROUP BY ItemCategory) T  ORDER BY HighestPrice desc LIMIT 1;";			
+			$sqlPurchase = "SELECT ItemCategory, HighestPrice FROM (SELECT ItemCategory, SUM(ItemPrice) as HighestPrice FROM Purchases  WHERE Buyer = '$email' GROUP BY ItemCategory) T  ORDER BY HighestPrice desc LIMIT 1;";			
 			$resultPurchase = mysqli_query($conn, $sqlPurchase);
 			if (mysqli_num_rows($resultPurchase) > 0) {
 				$rowPurchase = mysqli_fetch_assoc($resultPurchase);
