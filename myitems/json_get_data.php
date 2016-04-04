@@ -3,6 +3,9 @@
 	
 	$Email = $_POST["Email"];
 	
+	$sql1 = "SET GLOBAL time_zone = '+05:30';";
+	mysqli_query($conn, $sql1);
+	
 	$sql = "SELECT * FROM Purchases WHERE Buyer = '$Email' AND ItemName IS NOT NULL";
 	
 	$result = mysqli_query($conn, $sql);
