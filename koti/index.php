@@ -9,15 +9,14 @@ $resultUsers = mysqli_query($conn, $sqlUsers);
 if (mysqli_num_rows($resultUsers) > 0) {
 	while ($rowUsers = mysqli_fetch_assoc($resultUsers)) {
 		if (filter_var($rowUsers["Email"], FILTER_VALIDATE_EMAIL)) {
-			$email = $rowUsers["Email"];
-			//$sqlPurchase = "SELECT ItemPrice, ItemCategory FROM Purchases WHERE Buyer = '$email' ORDER BY ItemPrice desc LIMIT 1;";		
+			$email = $rowUsers["Email"];			
 			$sqlPurchase = "SELECT ItemCategory, Max(Quantity) as HighestPrice FROM (SELECT ItemCategory, SUM(ItemPrice) as Quantity FROM Purchases  WHERE Buyer = '$email' GROUP BY ItemCategory) T  ORDER BY HighestPrice desc LIMIT 1;";			
 			$resultPurchase = mysqli_query($conn, $sqlPurchase);
 			if (mysqli_num_rows($resultPurchase) > 0) {
 				$rowPurchase = mysqli_fetch_assoc($resultPurchase);
 				if ($rowPurchase["HighestPrice"] != 0) {
 					$purchase = $rowPurchase["ItemCategory"];
-					echo nl2br ("Highest price is : ".$rowPurchase["HighestPrice"]." for the category ".$rowPurchase["ItemCategory"]." for the email ".$rowUsers["Email"]."\n");
+					//echo nl2br ("Highest price is : ".$rowPurchase["HighestPrice"]." for the category ".$rowPurchase["ItemCategory"]." for the email ".$rowUsers["Email"]."\n");
 					$sqlOffers = "SELECT Offer FROM Offers WHERE Category = '$purchase';";
 					$resultOffers = mysqli_query($conn, $sqlOffers);
 					$body = "";
