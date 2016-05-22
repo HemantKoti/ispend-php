@@ -3,6 +3,7 @@
 		"name" => "muneer",
 		"name" => "mujeeb",
 		"name" => "noor",
-		"name" => "nazeem"
+		"name" => "nazeem",
+		"name" => "mohsin"
 	);
 ?>
