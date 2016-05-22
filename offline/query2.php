@@ -11,9 +11,7 @@
 		$flon = $record['fish_lon'];
 		
 		$sql1 = "INSERT INTO  `ispend`.`fishes` (`fish_type_id` ,`fish_lat` ,`fish_lon`) VALUES (NULL,  '$flat',  '$flon');";
-		mysqli_query($conn, $sql1);
-		
-		if(mysqli_query($mysqli,"")) {
+		if(mysqli_query($conn, $sql1)) {
 			echo "yes";
 		}
 		else {
