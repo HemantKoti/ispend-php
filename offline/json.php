@@ -21,6 +21,43 @@
 			'item_category' => "Electronics",
 			'item_price' => "14000"
 		)
+	  ),
+	  'budget' => array(
+		array(
+			'food' => "Moto G",
+			'entertainment' => "Electronics",
+			'electronics' => "14000",
+			'fashion' => "14000",
+			'other' => "14000"
+		),
+		array(
+			'food' => "Moto G",
+			'entertainment' => "Electronics",
+			'electronics' => "14000",
+			'fashion' => "14000",
+			'other' => "14000"
+		),
+		array(
+			'food' => "Moto G",
+			'entertainment' => "Electronics",
+			'electronics' => "14000",
+			'fashion' => "14000",
+			'other' => "14000"
+		),
+		array(
+			'food' => "Moto G",
+			'entertainment' => "Electronics",
+			'electronics' => "14000",
+			'fashion' => "14000",
+			'other' => "14000"
+		),
+		array(
+			'food' => "Moto G",
+			'entertainment' => "Electronics",
+			'electronics' => "14000",
+			'fashion' => "14000",
+			'other' => "14000"
+		)
 	  )
 );
 	
