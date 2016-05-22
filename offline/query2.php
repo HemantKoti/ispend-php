@@ -10,7 +10,7 @@
 		$flat = $record['fish_lat'];
 		$flon = $record['fish_lon'];
 
-		if(mysqli_query($mysqli,"INSERT INTO `ispend`.`fishes`(`fish_type_id`, `fish_lat`, `fish_lon`) VALUES ($fid, $flat, $flon)")) {
+		if(mysqli_query($mysqli,"INSERT INTO  `ispend`.`fishes` (`fish_lat` ,`fish_lon`) VALUES ('$flat',  '$flon')")) {
 			echo "yes";
 		}
 		else {
