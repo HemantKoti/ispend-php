@@ -4,6 +4,7 @@
 		"name" => "mujeeb",
 		"name" => "noor",
 		"name" => "nazeem",
-		"name" => "mohsin"
+		"name" => "mohsin",
+		"name" => "sameena"
 	);
 ?>
