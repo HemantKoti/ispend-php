@@ -14,7 +14,7 @@
 		$UploadedTime = $record['UploadedTime'];
 		$UploaderMAC = $record['UploaderMAC'];
 		
-		$sql1 = "INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`, `UploadedTime`, `UploaderMAC`) VALUES (NULL, '$Buyer', '$ItemName', '$ItemPrice', '$ItemCategory', '$UploadedTime', '$UploaderMAC');";
+		$sql1 = "INSERT INTO `ispend`.`Purchases` (`PurchaseID`, `Buyer`, `ItemName`, `ItemPrice`, `ItemCategory`, `PurchaseTime`, `UploadedTime`, `UploaderMAC`) VALUES (NULL, '$Buyer', '$ItemName', '$ItemPrice', '$ItemCategory', '$PurchaseTime', '$UploadedTime', '$UploaderMAC');";
 		if(mysqli_query($conn, $sql1)) {
 			echo "yes";
 		}
