@@ -30,7 +30,7 @@
 	}
 	else
 	{
-		$sql2 = "INSERT INTO `ispend`.`Budget`(`Email`, `Food`, `Entertainment`, `Electronics`, `Fashion`, `Other`, `Total`, `UploadedTime`, `UploaderMAC`) VALUES('$Email', '$Food', '$Entertainment', '$Electronics', '$Fashion', '$Other', '$Total', '$UploaderMAC', '$UploaderMAC');";
+		$sql2 = "INSERT INTO `ispend`.`Budget`(`Email`, `Food`, `Entertainment`, `Electronics`, `Fashion`, `Other`, `Total`, `UploadedTime`, `UploaderMAC`) VALUES('$Email', '$Food', '$Entertainment', '$Electronics', '$Fashion', '$Other', '$Total', '$UploadedTime', '$UploaderMAC');";
 	
 		if(mysqli_query($conn, $sql2))
 		{
