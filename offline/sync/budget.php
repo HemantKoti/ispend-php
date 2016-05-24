@@ -8,6 +8,8 @@
 	$Fashion = $_POST["Fashion"];
 	$Other = $_POST["Other"];
 	$Total = $_POST["Total"];
+	$UploadedTime = $_POST["UploadedTime"];
+	$UploaderMAC = $_POST["UploaderMAC"];
 	
 	$sql = "SELECT * FROM Budget WHERE Email = '$Email';";
 	
@@ -15,7 +17,7 @@
 	
 	if(mysqli_num_rows($result) > 0)
 	{
-		$sql1 = "UPDATE `ispend`.`Budget` SET `Food` = '$Food', `Entertainment` = '$Entertainment', `Electronics` = '$Electronics', `Fashion` = '$Fashion', `Other` = '$Other', `Total` = '$Total' WHERE `Email` = '$Email';";
+		$sql1 = "UPDATE `ispend`.`Budget` SET `Food` = '$Food', `Entertainment` = '$Entertainment', `Electronics` = '$Electronics', `Fashion` = '$Fashion', `Other` = '$Other', `Total` = '$Total', `UploadedTime` = '$UploadedTime', `UploaderMAC` = '$UploaderMAC' WHERE `Email` = '$Email';";
 	
 		if(mysqli_query($conn, $sql1))
 		{
@@ -28,7 +30,7 @@
 	}
 	else
 	{
-		$sql2 = "INSERT INTO `ispend`.`Budget`(`Email`, `Food`, `Entertainment`, `Electronics`, `Fashion`, `Other`, `Total`) VALUES('$Email', '$Food', '$Entertainment', '$Electronics', '$Fashion', '$Other', '$Total');";
+		$sql2 = "INSERT INTO `ispend`.`Budget`(`Email`, `Food`, `Entertainment`, `Electronics`, `Fashion`, `Other`, `Total`, `UploadedTime`, `UploaderMAC`) VALUES('$Email', '$Food', '$Entertainment', '$Electronics', '$Fashion', '$Other', '$Total', '$UploaderMAC', '$UploaderMAC');";
 	
 		if(mysqli_query($conn, $sql2))
 		{
