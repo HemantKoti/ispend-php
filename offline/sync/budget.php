@@ -1,15 +1,15 @@
 <?php
 	require "../../init.php";
 	
-	$Email = $_GET["Email"];
-	$Food = $_GET["Food"];
-	$Entertainment = $_GET["Entertainment"];
-	$Electronics = $_GET["Electronics"];
-	$Fashion = $_GET["Fashion"];
-	$Other = $_GET["Other"];
-	$Total = $_GET["Total"];
+	$Email = $_POST["Email"];
+	$Food = $_POST["Food"];
+	$Entertainment = $_POST["Entertainment"];
+	$Electronics = $_POST["Electronics"];
+	$Fashion = $_POST["Fashion"];
+	$Other = $_POST["Other"];
+	$Total = $_POST["Total"];
 	
-	$sql = "SELECT * FROM Users WHERE Email = '$Email';";
+	$sql = "SELECT * FROM Budget WHERE Email = '$Email';";
 	
 	$result = mysqli_query($conn, $sql);
 	
