@@ -6,7 +6,7 @@
 	$Name = $_POST["Name"];
 	$Password = $_POST["Password"];
 	
-	$sql = "INSERT INTO Users(Email, Mobile, Name, Password) VALUES('$Email', '$Mobile', '$Name', '$Password');";
+	$sql = "INSERT INTO FUsers(Email, Mobile, Name, Password) VALUES('$Email', '$Mobile', '$Name', '$Password');";
 	
 	if(mysqli_query($conn, $sql))
 	{
