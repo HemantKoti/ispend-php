@@ -1,10 +1,10 @@
  <?php
-	require "../../../init.php";
+	require "../../init.php";
 	
 	$Email = $_POST["Email"];
 	$Password = $_POST["Password"];
 	
-	$sql = "SELECT * FROM Users WHERE Email = '$Email' AND Password = '$Password';";
+	$sql = "SELECT * FROM FUsers WHERE Email = '$Email' AND Password = '$Password';";
 	
 	$result = mysqli_query($conn, $sql);
 	
@@ -16,7 +16,6 @@
 		
 		$user["Email"] = $row["Email"];
 		$user["Mobile"] = $row["Mobile"];
-		$user["AccountNumber"] = $row["AccountNumber"];
 		$user["Name"] = $row["Name"];
 		$user["Password"] = $row["Password"];
 	}
